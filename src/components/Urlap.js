@@ -39,6 +39,7 @@ function Urlap() {
                     <input type='text' 
                         className='form-control' 
                         id='title' 
+                        value= {szakdoga_nev}
                     >
                 
                     </input>
@@ -56,6 +57,7 @@ function Urlap() {
                     <input type='text' 
                         className='form-control' 
                         id='author' 
+                        value= {tagokneve}
                     >
                 
                     </input>
@@ -73,6 +75,7 @@ function Urlap() {
                     <input type='text' 
                         className='form-control' 
                         id='page' 
+                        value={oldallink}
                     >
                 
                     </input>
@@ -91,6 +94,7 @@ function Urlap() {
                     <input type='text' 
                         className='form-control' 
                         id='git' 
+                        value= {githublink}
                     >
                 
                     </input>
