@@ -5,31 +5,31 @@ function Urlap() {
 
   const {postData, setLista, lista, getLista} = useContext(AdatContext)
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
+  // const handleSubmit = async (event) => {
+  //   event.preventDefault()
 
-    const adat = {
-      szakdoga_nev: event.target.title.value,
-      tagokneve: event.target.author.value,
-      oldallink: event.target.page.value,
-      githublink: event.target.git.value
-    }
+    // const adat = {
+    //   szakdoga_nev: event.target.title.value,
+    //   tagokneve: event.target.author.value,
+    //   oldallink: event.target.page.value,
+    //   githublink: event.target.git.value
+    // }
 
-    try {
-      await postData( "api/szakdogak", adat)
-      alert("Sikeres")
-      event.target.reset()
-      getLista("api/szakdogak", setLista)
-    }catch (error){
-      console.log(error)
-    }
+  //   try {
+  //     await postData( "api/szakdogak", adat)
+  //     alert("Sikeres")
+  //     event.target.reset()
+  //     getLista("api/szakdogak", setLista)
+  //   }catch (error){
+  //     console.log(error)
+  //   }
 
-  }
+  // }
 
 
 
   return (
-    <form className='my-3' onSubmit={handleSubmit}>
+    <form className='my-3' /*onSubmit={handleSubmit}*/>
 
     <div className='form-group row mb-3'>
                 <label htmlFor="Szakdolgozat címe" className='col-sm-1 col-form-label'>
@@ -39,7 +39,7 @@ function Urlap() {
                     <input type='text' 
                         className='form-control' 
                         id='title' 
-                        value= {szakdoga_nev}
+                        
                     >
                 
                     </input>
@@ -57,7 +57,7 @@ function Urlap() {
                     <input type='text' 
                         className='form-control' 
                         id='author' 
-                        value= {tagokneve}
+                      
                     >
                 
                     </input>
@@ -75,7 +75,7 @@ function Urlap() {
                     <input type='text' 
                         className='form-control' 
                         id='page' 
-                        value={oldallink}
+                       
                     >
                 
                     </input>
@@ -94,7 +94,7 @@ function Urlap() {
                     <input type='text' 
                         className='form-control' 
                         id='git' 
-                        value= {githublink}
+                        
                     >
                 
                     </input>
